@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        background-color: rgb(6, 9, 3);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        word-spacing: 6px;
+        letter-spacing: 2px;
+        color: aliceblue;
+        border: 2px solid;
+      }
+      .button {
+        margin-left: 5%;
+        padding: 5px;
+        font-size: 30px;
+        background-color: white;
+        border: 2px solid black;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .button a {
+        color: black;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: rgba(246, 37, 37, 0.868);
+      }
+      .button:hover a {
+        color: white;
+      }
+
+      #box {
+        margin: 25%;
+        position: relative;
+        bottom: 80px;
+        text-align: center;
+      }
+      @media only screen and (max-width: 450px){
+      h2 {
+        font-size: 15px;
+        font-weight: 400;
+        word-spacing: 6px;
+        letter-spacing: 2px;
+        color: aliceblue;
+        border: 2px solid;
+      }
+      .button {
+        font-size: 10px;
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <h2>Please try Again... & provide the correct Information.</h2>
+      <button class="button">
+        <a href="index.html"
+          ><i class="fa-solid fa-rotate-right"></i> Try again...</a
+        >
+      </button>
+    </div>
+  </body>
+</html>

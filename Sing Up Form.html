@@ -1,0 +1,153 @@
+<html>
+<head>
+	<title> Sign Up Form </title>
+<style>
+
+*{
+	padding: 0px;
+	margin: 0px;
+
+}
+
+#container {
+	width: 500px;
+	margin: auto;
+	text-align: center;
+}
+img{
+	width: 15rem;
+	height: 10rem;
+}
+#form1{
+	width: 500px;
+	height: 310px;
+	margin: auto;
+	margin-top: 160px;
+	background: #1f2120;
+	border-radius: 1rem;
+	padding: 24px 28px;
+	font-family: arial;
+	position: relative;
+	top: -9rem;
+}
+
+input{
+	width: 49.5%;
+	border: none;
+	border-radius: 0;
+	padding: 13px; /* Added 'px' unit */
+	color: white;
+	background-color: #06cc73;
+	font-weight: 600;
+}
+
+.sign1{
+	text-align: center;
+	color: white;
+	margin: 20px;
+	font-weight: 600;
+	font-size: 17px;
+}
+
+.disable{
+	position: relative;
+	right: 5px;
+	background: #626e68;
+}
+
+#nameField{
+	display: flex;
+	justify-content: space-evenly;
+	max-height: 65px;
+	transition: max-height 0.5s;
+	overflow: hidden;
+}
+
+input[type="text"]{
+	padding: 6px;
+	margin: 0px 0px 25px 0px;
+	width: 49%;
+	border: 2px solid #777d7a;
+	background: #1f2120;
+
+}
+
+input[type="password"],input[type="text"]{
+	padding: 6px;
+	width: 99%;
+	margin: 0px 0px 25px 0px;
+	border: 2px solid #777d7a;
+	background: #1f2120;
+
+}
+
+
+#getstarted{
+	width: 99%;
+	padding: 12px;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+</style>
+</head>
+<body>
+	<div id="container">
+		<img src="/E-COMMERCE/media/ApniDukan.png" alt="">
+	<form id="form1">
+		<input type="submit" id="signupBtn"value="Sign Up" >
+		<input type="submit" id="loginBtn" class="disable" value="Log In">
+		<p class="sign1" id="title">Sign Up for Free</p>
+		<div id="nameField">
+			<input type="text" placeholder="First Name*"required>
+			<input type="text" placeholder="Last Name*"required>
+		</div>
+		<input type="text" placeholder="Enter your Phone Number" id="number"required>
+		<input type="password" placeholder="Enter a Password*"required>
+		<input type="submit" id="getstarted" class="green" value="GET STARTED">
+	</form>
+	</div>
+
+	<script>
+		let signupBtn = document.getElementById("signupBtn");
+		let loginBtn = document.getElementById("loginBtn");
+		let nameField = document.getElementById("nameField");
+		let title = document.getElementById("title");
+
+		loginBtn.onclick = function(event) {
+			event.preventDefault();
+			nameField.style.maxHeight = "0";
+			title.innerHTML = "Log In";
+			signupBtn.classList.add("disable");
+			loginBtn.classList.remove("disable");
+		}
+
+		signupBtn.onclick = function(event) {
+			event.preventDefault();
+			nameField.style.maxHeight = "65px";
+			title.innerHTML = "Sign Up for Free";
+			signupBtn.classList.remove("disable");
+			loginBtn.classList.add("disable");
+		}
+
+		getstarted.onclick = function() {
+    	var firstName = document.querySelector('#nameField input[type="text"]:nth-child(1)').value;
+    	var lastName = document.querySelector('#nameField input[type="text"]:nth-child(2)').value;
+    	var phoneNumber = document.getElementById("number").value;
+    	var password = document.querySelector('input[type="password"]').value;
+    
+    	if (phoneNumber === "" || password === "") {
+        	alert("Please fill out all fields before getting started.");
+    	} 
+		else if(phoneNumber.length !==10) {
+        	alert("Phone number should be 10 digits long.");
+    	}
+		 else {
+        	alert("Done...");
+    	}
+
+		}
+
+	</script>
+</body>
+</html>
